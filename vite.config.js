@@ -9,3 +9,10 @@ export default defineConfig({
     tailwindcss(), 
   ],
 })
+
+git init
+git add .
+git commit -m "first commit - Weather App with Tailwind v4"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+git push -u origin main
