@@ -9,11 +9,10 @@ function Card() {
           Advanced Weather Matrix
         </h2>
       </div>
-      
-      {/* --- RESPONSIVE BENTO GRID SYSTEM --- */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 auto-rows-auto md:auto-rows-[140px]">
         
-        {/* 1. Temperature Card (Bento Big - 2x2) */}
+        {/* 1. Temperature Card*/}
         <div className="sm:col-span-2 md:row-span-2 bg-linear-to-br from-cyan-500/10 to-transparent border border-cyan-400/20 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] group min-h-55 md:min-h-auto">
           <div className="flex justify-between items-start">
             <div>
@@ -28,7 +27,7 @@ function Card() {
           </div>
         </div>
         
-        {/* 2. Humidity Card (Bento Tall - 1x2) */}
+        {/* 2. Humidity Card*/}
         <div className="md:row-span-2 bg-black/20 border border-white/5 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-lg transition-all duration-300 hover:border-emerald-400/40 hover:shadow-[0_0_25px_rgba(52,211,153,0.1)] min-h-45 md:min-h-auto">
           <div className="flex justify-between items-center">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">Moisture</span>

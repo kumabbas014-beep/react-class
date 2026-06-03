@@ -32,31 +32,31 @@ function App() {
                 </a>
               </li>
               <li>
-                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/Radar.html">
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="./Pages/Radar.jsx">
                   <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📡</span>
                   <span>Live Radar</span>
                 </a>
               </li>
               <li>
-                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/Hourly.html">
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="Pages/Hourly.jsx">
                   <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">⏰</span>
                   <span>Hourly Forecast</span>
                 </a>
               </li>
               <li>
-                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/History.html">
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="Pages/History.jsx">
                   <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📜</span>
                   <span>Historical Data</span>
                 </a>
               </li>
               <li>
-                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/News.html">
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="Pages/News.jsx">
                   <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📰</span>
                   <span>Weather News</span>
                 </a>
               </li>
               <li>
-                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/Contact.html">
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="Pages/Contact.jsx">
                   <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📞</span>
                   <span>Contact Us</span>
                 </a>
@@ -171,23 +171,23 @@ function App() {
             <span className="text-xl">🏡</span>
             <span className="text-[10px] block mt-0.5 font-medium">Home</span>
           </a>
-          <a href="../Pages/Radar.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="Pages/Radar.jsx" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📡</span>
             <span className="text-[10px] block mt-0.5 font-medium">Radar</span>
           </a>
-          <a href="../Pages/Hourly.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="Pages/Hourly.jsx" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">⏰</span>
             <span className="text-[10px] block mt-0.5 font-medium">Hourly</span>
           </a>
-          <a href="../Pages/History.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="Pages/History.jsx" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📜</span>
             <span className="text-[10px] block mt-0.5 font-medium">History</span>
           </a>
-          <a href="../Pages/News.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="Pages/News.jsx" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📰</span>
             <span className="text-[10px] block mt-0.5 font-medium">News</span>
           </a>
-          <a href="../Pages/Contact.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="Pages/Contact.jsx" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📞</span>
             <span className="text-[10px] block mt-0.5 font-medium">Contact</span>
           </a>
