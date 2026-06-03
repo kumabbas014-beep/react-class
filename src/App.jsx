@@ -12,10 +12,8 @@ function App() {
   };
 
   return (
-
     <div className="min-h-screen bg-linear-to-br from-[#0b132b] to-[#1c2541] text-white font-['Inter'] pb-16 lg:pb-0">
       
-
       <nav className="hidden lg:block bg-black/25 border-b border-white/10 py-4 backdrop-blur-md">
         <div className="container mx-auto px-6 flex justify-between items-center relative">
           
@@ -23,18 +21,53 @@ function App() {
             <span>☀️</span> SkyCast
           </a>
           
-
           <div className="flex items-center grow justify-center">
             <ul className="flex items-center gap-8 list-none m-0 p-0">
-              <li><a className="text-white font-semibold no-underline opacity-100" href="#home">Home</a></li>
-              <li><a className="text-white/60 no-underline hover:text-white transition-colors" href="#radar">Live Radar</a></li>
-              <li><a className="text-white/60 no-underline hover:text-white transition-colors" href="#forecast">Hourly Forecast</a></li>
-              <li><a className="text-white/60 no-underline hover:text-white transition-colors" href="#historical">Historical Data</a></li>
-              <li><a className="text-white/60 no-underline hover:text-white transition-colors" href="#news">Weather News</a></li>
-              <li><a className="text-white/60 no-underline hover:text-white transition-colors" href="#contact">Contact Us</a></li>
+              
+              <li>
+                <a className="group text-white font-semibold no-underline flex items-center gap-1.5 transition-all" href="#home">
+                  <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">🏡</span>
+                  <span>Home</span>
+                </a>
+              </li>
+              
+              <li>
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/Radar.html">
+                  <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📡</span>
+                  <span>Live Radar</span>
+                </a>
+              </li>
+              
+              <li>
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/Hourly.html">
+                  <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">⏰</span>
+                  <span>Hourly Forecast</span>
+                </a>
+              </li>
+              
+              <li>
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/History.html">
+                  <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📜</span>
+                  <span>Historical Data</span>
+                </a>
+              </li>
+              
+              <li>
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/News.html">
+                  <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📰</span>
+                  <span>Weather News</span>
+                </a>
+              </li>
+              
+              <li>
+                <a className="group text-white/60 no-underline hover:text-white flex items-center gap-1.5 transition-all" href="../Pages/Contact.html">
+                  <span className="w-0 overflow-hidden opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 inline-block text-lg">📞</span>
+                  <span>Contact Us</span>
+                </a>
+              </li>
+
             </ul>
           </div>
-
 
           <div className="relative">
             <button 
@@ -44,15 +77,21 @@ function App() {
               ⚙️ Settings <span className="text-xs inline-block">▼</span>
             </button>
 
-            {/* Dropdown Menu */}
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-[#1c2541] border border-white/10 rounded-2xl shadow-2xl p-2 z-50 animate-fadeIn">
+              <div className="absolute right-0 mt-2 w-52 bg-[#1c2541] border border-white/10 rounded-2xl shadow-2xl p-2 z-50 animate-fadeIn">
                 <div className="text-[11px] text-white/40 uppercase font-bold px-3 py-1 tracking-wider">Theme</div>
                 <button onClick={() => alert('Light Mode Coming Soon!')} className="w-full text-left px-3 py-2 text-sm rounded-xl hover:bg-white/5 transition-colors flex items-center gap-2 text-white">
                   ☀️ Light Mode
                 </button>
                 <button onClick={() => alert('Already in Dark Mode!')} className="w-full text-left px-3 py-2 text-sm rounded-xl hover:bg-white/5 transition-colors flex items-center gap-2 text-cyan-400 font-medium">
                   🌙 Dark Mode (Active)
+                </button>
+                
+                <div className="border-t border-white/5 my-1.5"></div>
+                
+                <div className="text-[11px] text-white/40 uppercase font-bold px-3 py-1 tracking-wider">Language</div>
+                <button onClick={() => alert('Language Options Coming Soon!')} className="w-full text-left px-3 py-2 text-sm rounded-xl hover:bg-white/5 transition-colors flex items-center gap-2 text-white font-medium">
+                  🌐 Change Language
                 </button>
                 
                 <div className="border-t border-white/5 my-1.5"></div>
@@ -68,7 +107,6 @@ function App() {
         </div>
       </nav>
 
-
       <div className="block lg:hidden border-b border-white/10 bg-black/25 backdrop-blur-md py-3 px-4">
         <div className="flex justify-between items-center relative">
           <h4 className="font-bold text-cyan-400 text-xl m-0">☀️ SkyCast</h4>
@@ -76,16 +114,18 @@ function App() {
           <div>
             <button 
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="text-white/80 text-xl bg-white/5 p-2 rounded-full flex items-center justify-center border border-white/5 cursor-pointer"
-            >
+              className="text-white/80 text-xl bg-white/5 p-2 rounded-full flex items-center justify-center border border-white/5 cursor-pointer">
               ⚙️
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-[#1c2541] border border-white/10 rounded-2xl shadow-2xl p-2 z-50">
+              <div className="absolute right-0 mt-2 w-52 bg-[#1c2541] border border-white/10 rounded-2xl shadow-2xl p-2 z-50">
                 <div className="text-[10px] text-white/40 uppercase font-bold px-3 py-1">Theme</div>
                 <button onClick={() => alert('Light Mode Coming Soon!')} className="w-full text-left px-3 py-2 text-xs rounded-xl hover:bg-white/5 text-white">☀️ Light Mode</button>
                 <button onClick={() => alert('Already in Dark Mode!')} className="w-full text-left px-3 py-2 text-xs rounded-xl hover:bg-white/5 text-cyan-400">🌙 Dark Mode</button>
+                <div className="border-t border-white/5 my-1"></div>
+                <div className="text-[10px] text-white/40 uppercase font-bold px-3 py-1">Language</div>
+                <button onClick={() => alert('Language Coming Soon!')} className="w-full text-left px-3 py-2 text-xs rounded-xl hover:bg-white/5 text-white">🌐 Change Language</button>
                 <div className="border-t border-white/5 my-1"></div>
                 <button onClick={() => alert('Created with ❤️ by Kumail Abbas')} className="w-full text-left px-3 py-2 text-xs rounded-xl hover:bg-white/5 text-white">🚀 Who Made?</button>
               </div>
@@ -138,23 +178,23 @@ function App() {
             <span className="text-xl">🏡</span>
             <span className="text-[10px] block mt-0.5 font-medium">Home</span>
           </a>
-          <a href="#radar" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="../Pages/Radar.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📡</span>
             <span className="text-[10px] block mt-0.5 font-medium">Radar</span>
           </a>
-          <a href="#forecast" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="../Pages/Hourly.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">⏰</span>
             <span className="text-[10px] block mt-0.5 font-medium">Hourly</span>
           </a>
-          <a href="#historical" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="../Pages/History.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📜</span>
             <span className="text-[10px] block mt-0.5 font-medium">History</span>
           </a>
-          <a href="#news" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="../Pages/News.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📰</span>
             <span className="text-[10px] block mt-0.5 font-medium">News</span>
           </a>
-          <a href="#contact" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
+          <a href="../Pages/Contact.html" className="text-center no-underline text-white/50 flex flex-col items-center hover:text-white transition-colors">
             <span className="text-xl">📞</span>
             <span className="text-[10px] block mt-0.5 font-medium">Contact</span>
           </a>
@@ -166,3 +206,4 @@ function App() {
 }
 
 export default App;
+
