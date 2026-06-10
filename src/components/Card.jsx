@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Card() {
-  // 1. Top Cities Static Data Array
+// 💡 Arrow Function syntax implemented here perfectly!
+const Card = () => {
   const topCities = [
     { name: "Skardu", temp: "18°C", condition: "Clear 🏔️", bg: "from-cyan-500/10" },
     { name: "Karachi", temp: "34°C", condition: "Humid 🌊", bg: "from-amber-500/10" },
@@ -13,18 +13,15 @@ function Card() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
       
-      {/* ========================================================= */}
-      {/* 🏙️ SECTION 1: TOP CITIES QUICK ACCESS                  */}
-      {/* ========================================================= */}
+      {/* 🏙️ SECTION 1: TOP CITIES QUICK ACCESS */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
           <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-white/50">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-white/50">
             Popular Destinations
           </h3>
         </div>
 
-        {/* Top Cities Responsive Row */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {topCities.map((city, index) => (
             <div 
@@ -46,10 +43,7 @@ function Card() {
         </div>
       </div>
 
-
-      {/* ========================================================= */}
-      {/* 📊 SECTION 2: ADVANCED WEATHER MATRIX (BENTO GRID)       */}
-      {/* ========================================================= */}
+      {/* 📊 SECTION 2: ADVANCED WEATHER MATRIX (BENTO GRID) */}
       <div>
         <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
           <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
@@ -58,10 +52,9 @@ function Card() {
           </h2>
         </div>
         
-        {/* Bento Grid System */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 auto-rows-auto md:auto-rows-[140px]">
           
-          {/* 1. Temperature Card (Bento Big - 2x2) */}
+          {/* Temperature */}
           <div className="sm:col-span-2 md:row-span-2 bg-linear-to-br from-cyan-500/10 to-transparent border border-cyan-400/20 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] group min-h-55 md:min-h-auto">
             <div className="flex justify-between items-start">
               <div>
@@ -76,7 +69,7 @@ function Card() {
             </div>
           </div>
           
-          {/* 2. Humidity Card (Bento Tall - 1x2) */}
+          {/* Humidity */}
           <div className="md:row-span-2 bg-black/20 border border-white/5 rounded-3xl p-6 flex flex-col justify-between backdrop-blur-lg transition-all duration-300 hover:border-emerald-400/40 hover:shadow-[0_0_25px_rgba(52,211,153,0.1)] min-h-45 md:min-h-auto">
             <div className="flex justify-between items-center">
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">Moisture</span>
@@ -89,7 +82,7 @@ function Card() {
             </div>
           </div>
           
-          {/* 3. Wind Speed Card */}
+          {/* Wind Speed */}
           <div className="bg-black/20 border border-white/5 rounded-3xl p-5 flex items-center justify-between backdrop-blur-lg transition-all duration-300 hover:border-indigo-400/40 min-h-25 md:min-h-auto">
             <div className="flex flex-col justify-center">
               <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400">Velocity</span>
@@ -101,7 +94,7 @@ function Card() {
             </div>
           </div>
 
-          {/* 4. UV Index Card */}
+          {/* UV Index */}
           <div className="bg-black/20 border border-white/5 rounded-3xl p-5 flex items-center justify-between backdrop-blur-lg transition-all duration-300 hover:border-amber-400/40 min-h-25 md:min-h-auto">
             <div className="flex flex-col justify-center">
               <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400">Radiation</span>
@@ -111,7 +104,7 @@ function Card() {
             <p className="text-3xl font-black text-white">5</p>
           </div>
 
-          {/* 5. Sunrise & Sunset Card */}
+          {/* Sunrise / Sunset */}
           <div className="sm:col-span-2 bg-black/20 border border-white/5 rounded-3xl p-5 flex items-center justify-between backdrop-blur-lg transition-all duration-300 hover:border-orange-400/40 min-h-25 md:min-h-auto">
             <div className="flex items-center gap-4">
               <div className="h-10 w-10 rounded-2xl bg-orange-500/10 flex items-center justify-center text-xl border border-orange-500/20">🌅</div>
@@ -126,7 +119,7 @@ function Card() {
             </div>
           </div>
 
-          {/* 6. Air Quality Index */}
+          {/* AQI */}
           <div className="bg-black/20 border border-white/5 rounded-3xl p-5 flex items-center justify-between backdrop-blur-lg transition-all duration-300 hover:border-lime-400/40 min-h-25 md:min-h-auto">
             <div className="flex flex-col justify-center">
               <span className="text-[10px] font-bold uppercase tracking-widest text-lime-400">Pollution</span>
@@ -136,7 +129,7 @@ function Card() {
             <p className="text-3xl font-black text-white">32</p>
           </div>
 
-          {/* 7. Air Pressure Card */}
+          {/* Pressure */}
           <div className="bg-black/20 border border-white/5 rounded-3xl p-5 flex items-center justify-between backdrop-blur-lg transition-all duration-300 hover:border-purple-400/40 min-h-25 md:min-h-auto">
             <div className="flex flex-col justify-center">
               <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400">Atmosphere</span>
@@ -148,14 +141,14 @@ function Card() {
             </div>
           </div>
 
-          {/* 8. Visibility Card */}
+          {/* Visibility */}
           <div className="bg-black/20 border border-white/5 rounded-3xl p-5 flex items-center justify-between backdrop-blur-lg transition-all duration-300 hover:border-teal-400/40 min-h-25 md:min-h-auto">
             <div className="flex flex-col justify-center">
               <span className="text-[10px] font-bold uppercase tracking-widest text-teal-400">Optics</span>
               <h3 className="text-base font-bold text-white mt-0.5">Visibility</h3>
               <p className="text-xs text-teal-400 font-medium mt-1">Perfect view</p>
-          </div>
-          <p className="text-2xl font-black text-white">10<span className="text-xs font-normal text-white/40 ml-0.5">km</span></p>
+            </div>
+            <p className="text-2xl font-black text-white">10<span className="text-xs font-normal text-white/40 ml-0.5">km</span></p>
           </div>
 
         </div>

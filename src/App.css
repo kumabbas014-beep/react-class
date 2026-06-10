@@ -1,24 +1,18 @@
-/* Custom utility classes extending Tailwind v4 */
-
 .app-bg {
   min-height: 100vh;
-  /* Premium dark blue gradient background */
   background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
 }
 
 .hero-section {
-  /* Dynamic view height for center alignment */
   min-height: 75vh;
 }
 
 .location-badge {
-  /* Semi-transparent dark overlay for premium glassmorphism */
   background-color: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bottom-nav-text {
-  /* Extra micro font size for mobile navigation labels */
   font-size: 10px;
   display: block;
 }
