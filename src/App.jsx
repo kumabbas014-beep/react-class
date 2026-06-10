@@ -11,7 +11,7 @@ function App() {
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedbackText, setFeedbackText] = useState('');
   
-  // 💡 Name aur Email states add kar di hain
+  // 💡 Name aur Email states add
   const [feedbackName, setFeedbackName] = useState('');
   const [feedbackEmail, setFeedbackEmail] = useState('');
 
